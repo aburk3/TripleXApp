@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()
+void PlayGame()
 {
   // Print welcome messages
   std::cout << "You are a secret agent breaking into a secure server room...\n";
@@ -16,7 +16,7 @@ int main()
   // Print sum and product
   std::cout << "+ There are 3 numbers in the code";
   std::cout << "\n+ The codes add-up to: " << CodeSum;
-  std::cout << "\n+ The codes multiply to give: " << CodeProduct << "\n";
+  std::cout << "\n+ The codes multiply to give: " << CodeProduct << std::endl;
 
   int GuessA, GuessB, GuessC;
   std::cin >> GuessA >> GuessB >> GuessC;
@@ -29,11 +29,14 @@ int main()
   {
     std::cout << "\nYou win!";
   }
-
   else
   {
     std::cout << "\nYou lose!";
   }
+}
 
+int main()
+{
+  PlayGame();
   return 0;
 }
